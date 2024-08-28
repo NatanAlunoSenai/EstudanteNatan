@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de 2021:Recorde</title>
+
+
+// Função principal para processar a entrada e determinar os recordes
+<script>
+function verificarRecordes() {
+    // Usamos readline para capturar a entrada do usuário
+    const readline = require('readline');
+    const rl = readline.createInterface({
+        input: process.stdin,
+        output: process.stdout
+    });
+
+    // Array para armazenar os valores da entrada
+    let inputs = [];
+
+    // Evento que é chamado toda vez que uma linha é lida
+    rl.on('line', (line) => {
+        inputs.push(parseInt(line)); // Adiciona o número inteiro à lista de entradas
+        if (inputs.length === 3) {
+            rl.close(); // Fecha o leitor após ler todas as entradas
+            processarRecordes(inputs); // Chama a função para processar os recordes
+        }
+    });
+}
+</script>
+</head>
+
+<script></script>
+function processarRecordes([R, M, L]) {
+    // Verifica se o resultado é um novo recorde mundial
+    if (R < M) {
+        console.log('RM');
+    } else {
+        console.log('*');
+    }
+
+    // Verifica se o resultado é um novo recorde olímpico
+    if (R < L) {
+        console.log('RO');
+    } else {
+        console.log('*');
+    }
+}
+
+// Chama a função principal para iniciar o processamento
+
+verificarRecordes();
+
+</script></L>
+
+</html>
